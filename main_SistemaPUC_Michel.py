@@ -1,10 +1,12 @@
-# Aluno: Michel Urban Rosendo de Lima
 # Instituição: Pontifícia Universidade Católica do Paraná PUCPR
+# Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
+# Aluno/Autor: Michel Urban Rosendo de Lima
 # Disciplina: Raciocínio Cumputacional (1ºPeríodo)
 # Tema: Sistema de Gerenciamento PUC
 
 loop_menu = True
 loop_operations = False
+lista_alunos = [] #Incremento da lista que armazenará Alunos
 
 while loop_menu == True:
 
@@ -32,16 +34,24 @@ while loop_menu == True:
         loop_operations = True
     elif option == 2:
         section = "PROFESSOR"
-        loop_operations = True
+        print(f"\n-----[MENU DE OPERAÇOES -> {section}]-----")
+        print(">> Serviço indisponível no momento. \n>> EM DESENVOLVIMENTO!")
+        loop_operations = False
     elif option == 3:
         section = "DISCIPLINA"
-        loop_operations = True
+        print(f"\n-----[MENU DE OPERAÇOES -> {section}]-----")
+        print(">> Serviço indisponível no momento. \n>> EM DESENVOLVIMENTO!")
+        loop_operations = False
     elif option == 4:
         section = "TURMA"
-        loop_operations = True
+        print(f"\n-----[MENU DE OPERAÇOES -> {section}]-----")
+        print(">> Serviço indisponível no momento. \n>> EM DESENVOLVIMENTO!")
+        loop_operations = False
     elif option == 5:
         section = "MATRÍCULA"
-        loop_operations = True
+        print(f"\n-----[MENU DE OPERAÇOES -> {section}]-----")
+        print(">> Serviço indisponível no momento. \n>> EM DESENVOLVIMENTO!")
+        loop_operations = False
     elif option == 9:
         loop_menu = False
     else:   # Este else existe, pois no momento não temos as opções 6,7,8 disponíveis. Futura implementação.
@@ -68,19 +78,44 @@ while loop_menu == True:
 
         if option == 1:
             operacao = "INCLUIR"
+
+            print(f"\n-----[{section} -> {operacao}]-----")
+
+            print("\n> [DADOS CADASTRAIS]")
+            nome = input("> Digite o nome do aluno: ")
+            lista_alunos.append(nome)
+            input("> Aluno cadastrado com sucesso! Pressione Enter para voltar...")
+
         elif option == 2:
             operacao = "LISTAR"
+
+            print(f"\n-----[{section} -> {operacao}]-----")
+
+            print(f"\n> Qtd. de Alunos: {len(lista_alunos)}")
+
+            if(len(lista_alunos) > 0):
+                print("> Alunos cadastrados:")
+                for aluno in lista_alunos:
+                    print(f"  - {aluno}")
+
+                input("\n> Pressione Enter para continuar...")
+
+            else:
+                input("> Nenhum cadastrado no sistema! Pressione Enter para continuar...")
+
         elif option == 3:
             operacao = "ATUALIZAR"
+            print(f"\n-----[{section} -> {operacao}]-----")
+            print(">> Serviço indisponível no momento \n>> EM DESENVOLVIMENTO!")
         elif option == 4:
             operacao = "EXCLUIR"
+            print(f"\n-----[{section} -> {operacao}]-----")
+            print(">> Serviço indisponível no momento \n>> EM DESENVOLVIMENTO!")
         elif option == 5:
             loop_operations = False
         else:
             print("> Opção indisponível! Tente novamente.")
 
-        if option != 5 and (option >= 1 and option < 5):
-            print(f"\n-----[{section} -> {operacao}]-----")
-            print(">> Serviço indisponível no momento.")
+
 
 print("\n>> ENCERRANDO SISTEMA... Até a próxima!")
