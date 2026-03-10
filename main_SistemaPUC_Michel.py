@@ -60,25 +60,27 @@ def get_existing_foreign_key(message, file_name_to_check, key_to_check, entity_n
         print(f"> Erro - Código incorreto ou {entity_name} não encontrado(a)!")
 
 def display_main_menu(): # Função para exibir a tela do Menu Inicial
-    print("\n-------[SISTEMA PUC]-------")
-    print("\n       (1) Estudante")
+    print("-------[SISTEMA PUC]-------")
+    print("  Menus:")
+    print("       (1) Estudante")
     print("       (2) Professor")
     print("       (3) Disciplina")
     print("       (4) Turma")
     print("       (5) Matrícula")
     print("       (6) Sair")
-    print("\n------------------------------")
+    print("------------------------------")
     return int(input("> Digite uma das opções disponíveis: "))
 
 def display_operations_menu(section): # Função para exibir tela de Operações
-    print(f"\n-------[{section}]-------")
-    print("\n       (1) Cadastrar")
+    print(f"------[MENU -> {section}]------")
+    print(" Ações:")
+    print("       (1) Cadastrar")
     print("       (2) Listar")
     print("       (3) Atualizar")
     print("       (4) Excluir")
     print("       (5) Voltar")
-    print("\n------------------------------")
-    return int(input("> Digite uma das opções disponíveis: "))
+    print("-------------------------------")
+    return int(input("> Digite um tipo de ação: "))
 
 def create_operation(section, operation, file_name):  # Função para criar/adicionar dados.
     list_for_operation = read_file(file_name)  # LÊ/ABRE O RESPECTIVO ARQUIVO
@@ -141,8 +143,7 @@ def read_operation(section, operation, file_name):  # Função para LER/LISTAR d
 
     print(f"\n-----[{section} -> {operation}]-----")
     if len(list_for_operation) == 0:  # Se a lista referente a seção escolhida estiver vazia, não terá como LISTAR dados...
-        print("\n-----------------------------------")
-        input(f"> Nenhum(a) {section} cadastrado(a) no sistema para {operation}! Pressione Enter para voltar...")
+        input(f"\n> Nenhum(a) {section} cadastrado(a) no sistema para {operation}! Pressione Enter para voltar...")
     else:
         print(f"\n> QTD[{len(list_for_operation)}]: \n")
         for dictionary in list_for_operation:
@@ -158,7 +159,7 @@ def update_operation(section, operation, file_name):  # Função para atualizar 
 
     print(f"\n-----[{section} -> {operation}]-----")
     if len(list_for_operation) == 0:
-        input(f"> Nenhum(a) {section} cadastrado(a) no sistema para {operation}! Pressione Enter para voltar...")
+        input(f"\n> Nenhum(a) {section} cadastrado(a) no sistema para {operation}! Pressione Enter para voltar...")
         return list_for_operation
 
     while True:
@@ -229,8 +230,7 @@ def delete_operation(section, operation, file_name):  # Função para remover/ap
 
     print(f"\n-----[{section} -> {operation}]-----")
     if len(list_for_operation) == 0:  # Se a lista referente a seção escolhida estiver vazia, não terá como DELETAR dados...
-        print("\n------------------------------------------------------------------------------------------------")
-        input(f"> Nenhum(a) {section} cadastrado(a) no sistema para {operation}! Pressione Enter para voltar...")
+        input(f"\n> Nenhum(a) {section} cadastrado(a) no sistema para {operation}! Pressione Enter para voltar...")
         return list_for_operation
 
     while True:
@@ -323,11 +323,11 @@ def main():
             try:
                 option = display_main_menu()
                 if option <= 0 or option > 6:
-                    print("> Opção indisponível! Tente novamente.")
+                    print("\n\n> Opção indisponível! Tente novamente.")
                 else:
                     break
             except ValueError:
-                print("> Valor inválido! Insira apenas números.")
+                print("\n\n> Valor inválido! Insira apenas números.")
 
         loop_operations = False
         section = ""
@@ -370,11 +370,11 @@ def main():
                 try:
                     op_sec = display_operations_menu(section)
                     if op_sec <= 0 or op_sec > 5:
-                        print("> Opção indisponível! Tente novamente.")
+                        print("\n\n> Opção indisponível! Tente novamente.")
                     else:
                         break
                 except ValueError:
-                    print("> Valor inválido! Insira apenas números.")
+                    print("\n\n> Valor inválido! Insira apenas números.")
 
             if op_sec == 1:
                 create_operation(section, "CADASTRAR", file_for_operation)
