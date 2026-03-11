@@ -1,34 +1,33 @@
 # Sistema de Gerenciamento Acadêmico (Sistema PUC) 🎓
 
-Este projeto foi desenvolvido como requisito para a disciplina de Raciocínio Computacional do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da PUCPR. [cite_start]A temática de nosso projeto da disciplina será um Sistema de Gerenciamento Acadêmico[cite: 3]. [cite_start]O projeto foi construído inteiramente em Python [cite: 126] utilizando a IDE PyCharm.
+Este projeto foi desenvolvido como requisito para a disciplina de Raciocínio Computacional do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da PUCPR. A temática deste projeto da disciplina é um Sistema de Gerenciamento Acadêmico. O projeto foi construído inteiramente em Python, utilizando a IDE PyCharm.
 
-[cite_start]O sistema foi desenvolvido incrementalmente durante a disciplina[cite: 4], partindo da lógica de menus na primeira etapa e evoluindo para um sistema completo com persistência em arquivos.
-
+O sistema foi desenvolvido incrementalmente durante toda a disciplina de Raciocínio Computacional, partindo da lógica de menus na primeira etapa e evoluindo para um sistema completo com persistência em arquivos.
 
 ## 🚀 Funcionalidades Obrigatórias
 
 [cite_start]O sistema deverá oferecer a possibilidade de cadastro dos seguintes dados[cite: 7]:
-* [cite_start]**Estudante** [cite: 8]
-* [cite_start]**Disciplina** [cite: 9]
-* [cite_start]**Professor** [cite: 10]
-* [cite_start]**Turma** [cite: 11]
-* [cite_start]**Matrícula** [cite: 12]
+* **Estudante**
+* **Disciplina**
+* **Professor**
+* **Turma**
+* **Matrícula** 
 
-[cite_start]Para cada uma das funcionalidades descritas, deve ser possível realizar as seguintes funcionalidades[cite: 13]:
-* [cite_start]Incluir novos registros[cite: 14].
-* [cite_start]Listar os dados cadastrados[cite: 15].
-* [cite_start]Atualizar informações existentes[cite: 17].
-* [cite_start]Excluir registros do sistema[cite: 16].
+Para cada uma das funcionalidades descritas, é possível realizar as seguintes funcionalidades no modelo CRUD:
+* Incluir novos registros.
+* Listar os dados cadastrados.
+* Atualizar informações existentes.
+* Excluir registros do sistema.
 
 ## 🛠️ Tecnologias e Conceitos Aplicados
 
-[cite_start]Durante o desenvolvimento, diversos conceitos fundamentais de lógica de programação foram aplicados seguindo boas práticas de programação[cite: 102]:
+Durante o desenvolvimento, diversos conceitos fundamentais de lógica de programação foram aplicados seguindo boas práticas de programação:
 
-* [cite_start]**Persistência de Dados (JSON):** Para não perder dados ao reiniciar o programa, os dados devem ser armazenados em uma lista, e posteriormente em um arquivo JSON[cite: 18]. [cite_start]Foram utilizados arquivos para a persistência dos dados cadastrados[cite: 100].
-* [cite_start]**Estruturas de Dados:** Utilização de estruturas de dados compostas (listas, dicionários, e/ou tuplas) para organização dos dados[cite: 99].
-* [cite_start]**Controle de Fluxo:** Utilização de estruturas condicionais (if/elif/else) no código [cite: 97][cite_start], além da utilização de estruturas de repetição (for ou while) para navegação dos menus[cite: 98].
-* [cite_start]**Modularização:** Utilização de funções para modularizar as principais funcionalidades da aplicação[cite: 101]. Funções genéricas foram criadas para evitar duplicação de código.
-* [cite_start]**Validação e Integridade:** O sistema conta com validação de dados na manipulação de turmas e matrículas (verificar se um código já existe antes de incluir uma nova turma/matrícula com o mesmo código)[cite: 94]. [cite_start]Também conta com validações de dados e controle de possíveis exceções/erros de execução (try/except)[cite: 104].
+* **Persistência de Dados (JSON):** Para não perder dados ao reiniciar o programa, os dados devem ser armazenados em uma lista, e posteriormente em um arquivo JSON. Foram utilizados arquivos para a persistência dos dados cadastrados.
+* **Estruturas de Dados:** Utilização de estruturas de dados compostas (listas, dicionários, e/ou tuplas) para organização dos dados.
+* **Controle de Fluxo:** Utilização de estruturas condicionais (if/elif/else) no código, além da utilização de estruturas de repetição (for ou while) para navegação dos menus.
+* **Modularização:** Utilização de funções para modularizar as principais funcionalidades da aplicação[cite: 101]. Funções genéricas foram criadas para evitar duplicação de código.
+* **Validação e Integridade:** O sistema conta com validação de dados na manipulação de turmas e matrículas (verificar se um código já existe antes de incluir uma nova turma/matrícula com o mesmo código). Também conta com validações de dados e controle de possíveis exceções/erros de execução (try/except).
 
 ## 💻 Como Executar o Projeto
 
