@@ -6,7 +6,7 @@ O sistema foi desenvolvido incrementalmente durante toda a disciplina de Racioc�
 
 ## 🚀 Funcionalidades Obrigatórias
 
-[cite_start]O sistema deverá oferecer a possibilidade de cadastro dos seguintes dados[cite: 7]:
+O sistema deverá oferecer a possibilidade de cadastro dos seguintes dados:
 * **Estudante**
 * **Disciplina**
 * **Professor**
